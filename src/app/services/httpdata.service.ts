@@ -4,7 +4,7 @@ import { Http } from "@angular/http";
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class DataService{
+export class HttpDataService{
     
     constructor(public http:Http){
     

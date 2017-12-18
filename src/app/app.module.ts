@@ -6,25 +6,34 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import {SandboxComponent} from './components/sandbox/sandbox.component';
 import {UserComponent} from './components/user/user.component';
+import {HttpDemoComponent} from './components/httpdemo/httpdemo.component';
+
 import {  ObserveDemoComponent} from "./components/observabledemo/observerdemo.component";
+import { HttpModule } from "@angular/http";
 
 import { DataService} from "./services/data.service";
 import { ObserveDataService} from "./services/observedata.service";
+import { HttpDataService} from "./services/httpdata.service";
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SandboxComponent,
     UserComponent,
-    ObserveDemoComponent
+    ObserveDemoComponent,
+    HttpDemoComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     DataService,
-    ObserveDataService
+    ObserveDataService,
+    HttpDataService
   ],
   bootstrap: [AppComponent]
 })
