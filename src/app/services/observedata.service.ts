@@ -3,7 +3,7 @@ import { Observable} from "rxjs/Observable";
 
 @Injectable()
 export class ObserveDataService{
-    data:Observable<Array<any>>
+    data:Observable<any>
     constructor(){
     
     }
