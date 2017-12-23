@@ -24,8 +24,4 @@ export class SandboxComponent{
           this.data.push(data);
         });
     }
-
-    save(){
-       
-    }
 }
