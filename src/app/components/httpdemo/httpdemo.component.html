@@ -1,0 +1,42 @@
+<div class="container">
+
+        <div class="row mt-4 ">
+                <h2>HTTP GET / POST / DELETE /PUT Demo </h2>
+        </div>
+
+        <form (submit)="onSubmit();" class="mt-4">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="user.name" >
+                </div>
+                <div class="form-group">
+                        <label for="name">Email</label>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="user.email" >
+                </div>
+                <div class="form-group">
+                        <label for="name">Phone</label>
+                        <input type="text" class="form-control" name="phone" [(ngModel)]="user.phone" >
+                </div>
+                <input type="submit" value="Submit" class="btn btn-success">
+            </form>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+
+        <div *ngFor ="let user of users">
+        <ul>
+            <li>{{user.id}}</li>
+            <li>{{user.name}}</li>
+            <li>{{user.email}}</li>
+            <li>{{user.phone}}</li>
+        </ul>
+        <button class="btn btn-sm btn-primary" (click)="onEdit(user);"> Edit</button>
+        <button class="btn btn-sm btn-danger" (click)="onDelete(user.id);"> Delete</button>
+        <br><br>
+    </div>
+    
+
+    </div>
+</div>
+
+</div>
